@@ -15,3 +15,8 @@ Route::get('/', [
 	'uses' => 'FoodController@index',
    'as' => 'home'
 ]);
+
+Route::get('/foods/{string}', [
+	'uses' => 'FoodController@getFoodsSection',
+   'as' => 'section.foods'
+]);

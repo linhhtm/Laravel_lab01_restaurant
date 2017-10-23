@@ -6,7 +6,16 @@ use Illuminate\Http\Request;
 
 class FoodController extends Controller
 {
-   public function index(){
-    	return view('food.index');
+	public function index()
+	{
+    	$foods = \App\Food::all();
+     	return view('food.index', ['foods' => $foods]);
+   }
+   public function getFoodsSection($string)
+   {
+
+        $section = \App\Section::where('name', $string)->first();
+        $foods = $section->foods;
+        return view('food.index', ['foods' => $foods]);
    }
 }
