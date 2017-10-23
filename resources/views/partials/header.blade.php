@@ -8,16 +8,16 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="#">Breakfast <span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="#"><i class="fa fa-cutlery" aria-hidden="true"></i> Breakfast <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Lunch</a>
+					<a class="nav-link" href="#"><i class="fa fa-bed" aria-hidden="true"></i> Lunch</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Dinner</a>
+					<a class="nav-link" href="#"><i class="fa fa-gift" aria-hidden="true"></i> Dinner</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Drinks</a>
+					<a class="nav-link" href="#"><i class="fa fa-coffee" aria-hidden="true"></i> Drinks</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">Contact us</a>
@@ -26,7 +26,7 @@
 			
 			<ul class="nav navbar-nav navbar-right">
 				<li class="nav-item">
-					<a class="nav-link" href="#"> Cart (0)</a>
+					<a class="nav-link" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart (0)</a>
 				</li>
 			</ul>
 		</div>
