@@ -13,7 +13,7 @@
 			<h2>${{ $food['price'] }}</h2>
       	<h4>{{ $food['description'] }}<h4>
 
-      	<form action="#" method="POST">
+      	<form action="{{ route('cart.store') }}" method="POST">
 		      {!! csrf_field() !!}
 		      <input type="hidden" name="id" value="{{ $food['id'] }}">
 		      <input type="hidden" name="name" value="{{ $food['name'] }}">

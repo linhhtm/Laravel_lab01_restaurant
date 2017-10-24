@@ -26,7 +26,7 @@
 			
 			<ul class="nav navbar-nav navbar-right">
 				<li class="nav-item">
-					<a class="nav-link" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart (0)</a>
+					<a class="nav-link" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart ({{ Cart::instance('default')->count(false) }})</a>
 				</li>
 			</ul>
 		</div>

@@ -21,4 +21,7 @@ Route::get('/foods/{string}', [
    'as' => 'section.foods'
 ]);
 
+Route::delete('emptyCart', 'CartController@emptyCart');
+
 Route::resource('food', 'FoodController', ['only' => ['index', 'show']]);
+Route::resource('cart', 'CartController');
