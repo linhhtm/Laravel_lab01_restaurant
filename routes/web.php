@@ -20,3 +20,5 @@ Route::get('/foods/{string}', [
 	'uses' => 'FoodController@getFoodsSection',
    'as' => 'section.foods'
 ]);
+
+Route::resource('food', 'FoodController', ['only' => ['index', 'show']]);

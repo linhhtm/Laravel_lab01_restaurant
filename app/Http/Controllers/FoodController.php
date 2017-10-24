@@ -18,4 +18,11 @@ class FoodController extends Controller
         $foods = $section->foods;
         return view('food.index', ['foods' => $foods]);
    }
+
+   public function show($id)
+    {
+        $food = \App\Food::find($id);
+
+        return view('food.details',['food' => $food]);
+    }
 }
