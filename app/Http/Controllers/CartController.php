@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -33,6 +32,7 @@ class CartController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    //Add to Card button
     public function store(Request $request)
     {
         $duplicates = Cart::search(function ($cartItem, $rowId) use ($request) {
@@ -79,9 +79,23 @@ class CartController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    //Onchange of Quantity using by ajax call
     public function update(Request $request, $id)
     {
-        //
+        // Validation on max quantity
+        $validator = Validator::make($request->all(), [
+            'quantity' => 'required|numeric|between:1,5'
+        ]);
+
+         if ($validator->fails()) {
+            session()->flash('error_message', 'Quantity must be between 1 and 5.');
+            return response()->json(['success' => false]);
+         }
+
+        Cart::update($id, $request->quantity);
+        session()->flash('success_message', 'Quantity was updated successfully!');
+
+        return response()->json(['success' => true]);
     }
 
     /**
