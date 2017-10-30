@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use \Cart as Cart;
+use Validator; //--> missing this cause 500 Server Internal Error
 
 class CartController extends Controller
 {
